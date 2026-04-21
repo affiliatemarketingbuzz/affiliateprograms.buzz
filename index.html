@@ -1,0 +1,2247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Affiliate Programs to Earn Passive Income in 2026 - affiliateprograms.buzz</title>
+<meta name="description" content="Discover the best affiliate programs across SaaS, finance, e-commerce and more. Compare commissions, payouts, and join high-paying affiliate programs easily.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+
+<style>
+
+  /* ════════════════════════════════════════════════
+     RESET & VARIABLES
+     ════════════════════════════════════════════════ */
+
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --primary: #4318D1;
+    --primary-dark: #1a0a5c;
+    --accent: #c1ff00;
+    --dark: #0f0a2e;
+    --white: #ffffff;
+    --light: #f5f3ff;
+    --gray: #6b7280;
+    --gray-light: #e5e7eb;
+    --blue: #2563eb;
+    --font-display: 'Outfit', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --max-w: 1280px;
+    --px: clamp(1rem, 4vw, 3rem);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--dark);
+    overflow-x: hidden;
+    background: #fff;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  button {
+    cursor: pointer;
+    font-family: var(--font-display);
+  }
+
+  input {
+    font-family: var(--font-body);
+  }
+
+  .container {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 var(--px);
+  }
+
+
+  /* ════════════════════════════════════════════════
+     ANIMATIONS
+     ════════════════════════════════════════════════ */
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+
+  /* ════════════════════════════════════════════════
+     HEADER
+     ════════════════════════════════════════════════ */
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 0 var(--px);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+  }
+
+  .header-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 74px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-img {
+    height: 38px;
+    width: auto;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .nav a {
+    color: var(--dark);
+    font-size: 15px;
+    font-weight: 500;
+    font-family: var(--font-display);
+    transition: color 0.25s;
+  }
+
+  .nav a:hover {
+    color: #1a4fd6;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #1a4fd6;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    font-family: var(--font-display);
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+
+  .cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(26, 79, 214, 0.35);
+  }
+
+  .cta-btn i {
+    font-size: 12px;
+    margin-left: 4px;
+  }
+
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    z-index: 101;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--dark);
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+
+  /* Mobile nav dropdown */
+  .nav.show {
+    display: flex !important;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px 24px 28px;
+    gap: 0;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    animation: slideDown 0.3s ease;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .nav.show a {
+    padding: 14px 0;
+    font-size: 16px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .nav.show a:last-child {
+    border-bottom: none;
+  }
+
+
+  /* ════════════════════════════════════════════════
+     HERO
+     ════════════════════════════════════════════════ */
+
+.hero {
+  background: #f3eefc;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px var(--px, 40px) 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-inner {
+  max-width: var(--max-w, 1280px);
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+}
+
+/* ---- LEFT SIDE ---- */
+.hero-content {
+  animation: fadeInUp 0.8s ease;
+}
+
+.hero-kicker {
+  display: inline-block;
+  color: #6c4ee6;
+  font-family: var(--font-display, inherit);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 5.2vw, 68px);
+  font-weight: 900;
+  line-height: 1.08;
+  font-family: var(--font-display, inherit);
+  margin-bottom: 28px;
+  color: #0f0b24;
+  letter-spacing: -0.5px;
+}
+
+/* The gradient on "Top Search" — uses background-clip to paint text */
+.hero h1 .hl {
+  background: linear-gradient(90deg, #6c4ee6 0%, #b44bd6 50%, #e63b8a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.hero-desc {
+  color: #6b6480;
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 460px;
+  margin-bottom: 40px;
+}
+
+/* CTA row — pill button + circular arrow + text link */
+.hero-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  background: #6c4ee6;
+  color: #fff;
+  padding: 18px 42px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 13px;
+  font-family: var(--font-display, inherit);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.hero-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(108, 78, 230, 0.4);
+  background: #5a3fd1;
+}
+
+.hero-btn-arrow {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #6c4ee6;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.hero-btn-arrow svg {
+  width: 20px;
+  height: 20px;
+}
+
+.hero-btn-arrow:hover {
+  transform: rotate(45deg);
+}
+
+.hero-link {
+  color: #0f0b24;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+/* ---- RIGHT SIDE ---- */
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+.hero-illustration {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  animation: floatY 4s ease-in-out infinite;
+}
+
+/* The thin curved line linking the two halves */
+.hero-connector {
+  position: absolute;
+  left: -40%;
+  top: 40%;
+  width: 80%;
+  height: 60%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ---- ANIMATIONS ---- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 968px) {
+  .hero {
+    padding: 120px 24px 60px;
+    min-height: auto;
+  }
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-cta-row {
+    justify-content: center;
+  }
+  .hero-connector {
+    display: none; /* connector only makes sense in two-column layout */
+  }
+  .hero-visual {
+    min-height: auto;
+    order: -1; /* on mobile, often nicer to show visual first — remove if you prefer text first */
+  }
+  .hero-illustration {
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: clamp(32px, 9vw, 44px);
+  }
+  .hero-btn-primary {
+    padding: 16px 32px;
+  }
+  .hero-cta-row {
+    gap: 14px;
+  }
+}
+
+
+  /* ════════════════════════════════════════════════
+     PREFERRED CAMPAIGNS
+     ════════════════════════════════════════════════ */
+
+  .affiliate-programs-section {
+    background: #ffffff;
+    padding: 90px 0 100px;
+    overflow: hidden;
+  }
+
+  .ap-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    padding: 0 24px;
+  }
+
+  .ap-header h2 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 800;
+    color: #0f0a2e;
+    margin-bottom: 14px;
+  }
+
+  .ap-subtitle {
+    font-size: 17px;
+    color: #6B7280;
+    line-height: 1.7;
+  }
+
+  .ap-slider-wrapper {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+
+  .ap-slider {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 16px 4px 24px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .ap-slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ap-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1.5px solid #E5E7EB;
+    color: #374151;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  }
+
+  .ap-arrow:hover {
+    background: #111827;
+    color: #ffffff;
+    border-color: #111827;
+    box-shadow: 0 6px 20px rgba(17, 24, 39, 0.18);
+    transform: translateY(-50%) scale(1.05);
+  }
+
+  .ap-arrow-left {
+    left: 8px;
+  }
+
+  .ap-arrow-right {
+    right: 8px;
+  }
+
+  .ap-card {
+    flex: 0 0 260px;
+    background: #ffffff;
+    border: 1.5px solid #E5E7EB;
+    border-radius: 16px;
+    padding: 36px 24px 32px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+  }
+
+  .ap-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+    border-color: #D1D5DB;
+  }
+
+  .ap-card-logo {
+    width: 88px;
+    height: 88px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F9FAFB;
+    border-radius: 16px;
+    border: 1px solid #F3F4F6;
+    padding: 14px;
+    transition: all 0.3s ease;
+  }
+
+  .ap-card:hover .ap-card-logo {
+    background: #F3F4F6;
+    transform: scale(1.05);
+  }
+
+  .ap-card-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .ap-card-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 14px;
+  }
+
+  .ap-card-tag {
+    display: inline-block;
+    padding: 5px 14px;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 50px;
+    margin-bottom: 18px;
+  }
+
+  .tag-blue {
+    background: #EFF6FF;
+    color: #2563EB;
+  }
+
+  .tag-orange {
+    background: #FEF3C7;
+    color: #D97706;
+  }
+
+  .tag-green {
+    background: #ECFDF5;
+    color: #059669;
+  }
+
+  .tag-purple {
+    background: #F3E8FF;
+    color: #7C3AED;
+  }
+
+  .ap-card-payout {
+    font-size: 14px;
+    color: #6B7280;
+  }
+
+  .ap-card-payout strong {
+    color: #111827;
+    font-weight: 700;
+  }
+
+
+  /* ════════════════════════════════════════════════
+     NEWSLETTER
+     ════════════════════════════════════════════════ */
+
+  .newsletter {
+    padding: 90px 0;
+    background: #f5f0eb;
+  }
+
+  .newsletter-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: stretch;
+  }
+
+  .newsletter-image {
+    border-radius: 22px;
+    overflow: hidden;
+    min-height: 360px;
+  }
+
+  .newsletter-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 22px;
+  }
+
+  .newsletter-form {
+    background: var(--blue);
+    border-radius: 22px;
+    padding: 52px 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .newsletter-form h2 {
+    color: #fff;
+    font-size: clamp(28px, 3vw, 44px);
+    font-weight: 800;
+    line-height: 1.12;
+    font-family: var(--font-display);
+    margin-bottom: 18px;
+  }
+
+  .newsletter-form p {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 15px;
+    line-height: 1.75;
+    margin-bottom: 34px;
+  }
+
+  .newsletter-input-row {
+    display: flex;
+    gap: 12px;
+  }
+
+  .newsletter-input-row input {
+    flex: 1;
+    padding: 15px 26px;
+    border-radius: 50px;
+    border: none;
+    font-size: 15px;
+    outline: none;
+  }
+
+  .newsletter-submit {
+    background: var(--accent);
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 15px;
+    white-space: nowrap;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+
+  .newsletter-submit:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(193, 255, 0, 0.3);
+  }
+
+
+  /* ════════════════════════════════════════════════
+     CASE STUDIES
+     ════════════════════════════════════════════════ */
+
+  .topics {
+    padding: 100px 0 80px;
+    background: var(--white);
+  }
+
+  .topics .section-title {
+    text-align: center;
+    margin-bottom: 55px;
+  }
+
+  .topics .section-title h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 3.2vw, 3rem);
+    color: var(--dark);
+  }
+
+  .topics .section-title p {
+    color: var(--gray);
+    margin-top: 14px;
+    font-size: 1.15rem;
+  }
+
+  .topics-slider-wrap {
+    overflow: hidden;
+    padding: 20px 0;
+  }
+
+  .topics-track {
+    display: flex;
+    gap: 32px;
+    animation: topicsScroll 25s linear infinite;
+    width: max-content;
+    will-change: transform;
+  }
+
+  .topics-track:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes topicsScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .topic-item {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 420px;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--dark);
+    transition: transform 0.3s ease;
+  }
+
+  .topic-item:hover {
+    transform: translateY(-6px);
+  }
+
+  .topic-item-image {
+    width: 100%;
+    height: 260px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: var(--light);
+  }
+
+  .topic-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+
+  .topic-item:hover .topic-item-image img {
+    transform: scale(1.06);
+  }
+
+  .topic-item-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4px;
+  }
+
+  .topic-item-text h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .topic-item-text span {
+    font-size: 0.9rem;
+    color: var(--gray);
+  }
+
+  .topic-item-arrow {
+    width: 46px;
+    height: 46px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #fff;
+    font-size: 18px;
+    transition: background 0.3s, transform 0.3s;
+  }
+
+  .topic-item-arrow i {
+    transform: rotate(-45deg);
+  }
+
+  .topic-item:hover .topic-item-arrow {
+    background: var(--primary-dark);
+    transform: scale(1.1);
+  }
+
+
+  /* ════════════════════════════════════════════════
+     BLOG
+     ════════════════════════════════════════════════ */
+
+  .blog {
+    padding: 110px 0;
+    background: #f9fef5;
+  }
+
+  .section-heading {
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 800;
+    color: var(--dark);
+    font-family: var(--font-display);
+    margin-bottom: 48px;
+  }
+
+  .section-tag-light {
+    display: inline-block;
+    padding: 7px 22px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: 600;
+    font-family: var(--font-display);
+    margin-bottom: 18px;
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+    text-align: left;
+  }
+
+  .blog-card {
+    background: #fff;
+    border-radius: 22px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+  }
+
+  .blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.08);
+  }
+
+  .blog-thumb {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .blog-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+
+  .blog-tag {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: var(--primary);
+    color: #fff;
+    padding: 5px 16px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .blog-body {
+    padding: 24px;
+  }
+
+  .blog-body h3 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 12px;
+  }
+
+  .blog-body p {
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 1.65;
+    margin-bottom: 20px;
+  }
+
+  .blog-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 16px;
+  }
+
+  .blog-date {
+    background: linear-gradient(135deg, #2563eb, #06b6d4);
+    color: #fff;
+    border-radius: 12px;
+    padding: 8px 14px;
+    text-align: center;
+  }
+
+  .blog-date strong {
+    display: block;
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  .blog-date span {
+    font-size: 11px;
+    text-transform: uppercase;
+  }
+
+  .read-more {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--dark);
+    transition: color 0.25s;
+  }
+
+  .blog-card:hover .read-more {
+    color: var(--primary);
+  }
+
+  .read-more i {
+    transition: transform 0.25s;
+  }
+
+  .blog-card:hover .read-more i {
+    transform: translateX(4px);
+  }
+
+
+  /* ════════════════════════════════════════════════
+     FAQ
+     ════════════════════════════════════════════════ */
+
+  .faq {
+    padding: 110px 0;
+    background: #fff;
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .faq-tag {
+    display: inline-block;
+    padding: 7px 22px;
+    border-radius: 30px;
+    background: rgba(67, 24, 209, 0.08);
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 700;
+    font-family: var(--font-display);
+    margin-bottom: 22px;
+  }
+
+  .faq-left h2 {
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 800;
+    color: var(--dark);
+    line-height: 1.12;
+    font-family: var(--font-display);
+    margin-bottom: 20px;
+  }
+
+  .faq-left > p {
+    color: var(--gray);
+    font-size: 15px;
+    line-height: 1.75;
+    margin-bottom: 34px;
+  }
+
+  .faq-checks {
+    border-top: 1px solid var(--gray-light);
+    padding-top: 22px;
+    display: flex;
+    gap: 34px;
+    flex-wrap: wrap;
+  }
+
+  .faq-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .faq-check i {
+    color: var(--primary);
+    font-size: 16px;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .faq-item {
+    border: 1px solid #eee;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+
+  .faq-item.active {
+    border-color: var(--primary);
+    box-shadow: 0 4px 24px rgba(67, 24, 209, 0.1);
+  }
+
+  .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 20px 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: var(--font-display);
+    color: var(--dark);
+    text-align: left;
+    transition: color 0.25s;
+  }
+
+  .faq-item.active .faq-question {
+    color: var(--primary);
+  }
+
+  .faq-chevron {
+    transition: transform 0.35s;
+    flex-shrink: 0;
+    margin-left: 14px;
+    font-size: 14px;
+    color: var(--gray);
+  }
+
+  .faq-item.active .faq-chevron {
+    transform: rotate(180deg);
+    color: var(--primary);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s ease;
+  }
+
+  .faq-answer p {
+    padding: 0 26px 22px;
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+
+  /* ════════════════════════════════════════════════
+     LOGO MARQUEE
+     ════════════════════════════════════════════════ */
+
+  .marquee-section {
+    padding: 65px 0;
+    background: #fff;
+    overflow: hidden;
+  }
+
+  .marquee-header {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    justify-content: center;
+    margin-bottom: 38px;
+    padding: 0 var(--px);
+  }
+
+  .marquee-header .line {
+    height: 1px;
+    flex: 1;
+    background: var(--gray-light);
+    max-width: 300px;
+  }
+
+  .marquee-header p {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--dark);
+    font-family: var(--font-display);
+    white-space: nowrap;
+  }
+
+  .marquee-track {
+    display: flex;
+    gap: 60px;
+    width: max-content;
+    animation: marquee 40s linear infinite;
+  }
+
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+
+  .marquee-item {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .marquee-item img {
+    height: 36px;
+    width: auto;
+    opacity: 0.4;
+    transition: opacity 0.3s;
+  }
+
+  .marquee-item:hover img {
+    opacity: 1;
+  }
+
+
+  /* ════════════════════════════════════════════════
+     FOOTER
+     ════════════════════════════════════════════════ */
+
+  .footer {
+    background: var(--dark);
+    color: #fff;
+    padding: 68px var(--px) 32px;
+  }
+
+  .footer-grid {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 50px;
+  }
+
+  .footer-brand p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    line-height: 1.75;
+    margin-bottom: 22px;
+    max-width: 290px;
+  }
+
+  .footer-col h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 22px;
+    font-family: var(--font-display);
+  }
+
+  .footer-col h3::after {
+    content: '';
+    display: block;
+    width: 42px;
+    height: 3px;
+    background: var(--blue);
+    border-radius: 2px;
+    margin-top: 14px;
+  }
+
+  .footer-col p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-links a {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 15px;
+    transition: color 0.3s;
+  }
+
+  .footer-links a:hover {
+    color: var(--accent);
+  }
+
+  .footer-email-row {
+    display: flex;
+    margin-top: 18px;
+  }
+
+  .footer-email-row input {
+    flex: 1;
+    padding: 13px 18px;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.04);
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+  }
+
+  .footer-email-row input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .footer-email-row button {
+    background: var(--primary);
+    border: none;
+    color: #fff;
+    padding: 13px 18px;
+    border-radius: 0 8px 8px 0;
+    font-size: 18px;
+    transition: background 0.25s;
+  }
+
+  .footer-email-row button:hover {
+    background: #5a2ee8;
+  }
+
+  .footer-bottom {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 22px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 13px;
+  }
+
+  .footer-logo-img {
+    height: 44px;
+    width: auto;
+    filter: brightness(0) invert(1);
+  }
+
+
+  /* ════════════════════════════════════════════════
+     RESPONSIVE — TABLET (max-width: 1024px)
+     ════════════════════════════════════════════════ */
+
+  @media (max-width: 1024px) {
+    .nav {
+      gap: 24px;
+    }
+    .nav a {
+      font-size: 14px;
+    }
+    .hero-blob {
+      width: 360px;
+      height: 420px;
+    }
+    .hero-visual {
+      min-height: 440px;
+    }
+    .hero::after {
+      width: 600px;
+      height: 300px;
+    }
+    .ap-slider-wrapper {
+      padding: 0 50px;
+    }
+    .ap-card {
+      flex: 0 0 230px;
+    }
+    .topic-item {
+      width: 340px;
+    }
+    .topic-item-image {
+      height: 220px;
+    }
+    .faq-grid {
+      gap: 40px;
+    }
+  }
+
+
+  /* ════════════════════════════════════════════════
+     RESPONSIVE — TABLET PORTRAIT (max-width: 768px)
+     ════════════════════════════════════════════════ */
+
+  @media (max-width: 768px) {
+    .nav {
+      display: none;
+    }
+    .menu-toggle {
+      display: block;
+    }
+    .header-inner {
+      height: 64px;
+    }
+    .logo-img {
+      height: 32px;
+    }
+    .cta-btn {
+      padding: 8px 18px;
+      font-size: 13px;
+    }
+    .hero {
+      min-height: auto;
+      padding: 90px var(--px) 60px;
+    }
+    .hero-inner {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 40px;
+    }
+    .hero-visual {
+      min-height: 380px;
+      order: -1;
+    }
+    .hero-blob {
+      width: 300px;
+      height: 340px;
+    }
+    .hero::after {
+      display: none;
+    }
+    .hero h1 {
+      font-size: clamp(36px, 8vw, 52px);
+    }
+    .hero-desc {
+      margin: 0 auto 30px;
+      max-width: 100%;
+    }
+    .hero-badge-float {
+      padding: 8px 18px 8px 10px;
+    }
+    .hero-avs span {
+      width: 32px;
+      height: 32px;
+    }
+    .affiliate-programs-section {
+      padding: 60px 0 70px;
+    }
+    .ap-header h2 {
+      font-size: 28px;
+    }
+    .ap-slider-wrapper {
+      padding: 0 16px;
+    }
+    .ap-arrow {
+      width: 40px;
+      height: 40px;
+    }
+    .newsletter {
+      padding: 60px 0;
+    }
+    .newsletter-grid {
+      grid-template-columns: 1fr;
+    }
+    .newsletter-form {
+      padding: 36px 28px;
+    }
+    .newsletter-form h2 {
+      font-size: 26px;
+    }
+    .newsletter-input-row {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .newsletter-submit {
+      width: 100%;
+      text-align: center;
+    }
+    .topics {
+      padding: 60px 0 50px;
+    }
+    .topic-item {
+      width: 300px;
+    }
+    .topic-item-image {
+      height: 190px;
+    }
+    .blog {
+      padding: 60px 0;
+    }
+    .section-heading {
+      font-size: 28px;
+      margin-bottom: 32px;
+    }
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+    .faq {
+      padding: 60px 0;
+    }
+    .faq-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .faq-left h2 {
+      font-size: 28px;
+    }
+    .marquee-section {
+      padding: 40px 0;
+    }
+    .marquee-item img {
+      height: 28px;
+    }
+    .footer {
+      padding: 50px var(--px) 24px;
+    }
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+  }
+
+
+  /* ════════════════════════════════════════════════
+     RESPONSIVE — MOBILE (max-width: 480px)
+     ════════════════════════════════════════════════ */
+
+  @media (max-width: 480px) {
+    .header-inner {
+      height: 58px;
+    }
+    .logo-img {
+      height: 28px;
+    }
+    .cta-btn {
+      padding: 7px 14px;
+      font-size: 12px;
+    }
+    .hero {
+      padding: 76px 16px 40px;
+    }
+    .hero h1 {
+      font-size: 34px;
+    }
+    .hero-desc {
+      font-size: 14px;
+    }
+    .hero-btn-primary {
+      width: 100%;
+      justify-content: center;
+      font-size: 13px;
+    }
+    .hero-visual {
+      min-height: 300px;
+    }
+    .hero-blob {
+      width: 250px;
+      height: 280px;
+    }
+    .hero::after {
+      display: none;
+    }
+    .hero-badge-float {
+      padding: 7px 14px 7px 8px;
+      gap: 8px;
+    }
+    .hero-avs span {
+      width: 28px;
+      height: 28px;
+    }
+    .hero-badge-float .b-txt {
+      font-size: 13px;
+    }
+    .ap-arrow {
+      display: none;
+    }
+    .ap-card {
+      flex: 0 0 calc(100vw - 56px);
+      padding: 24px 16px 20px;
+    }
+    .ap-card-logo {
+      width: 64px;
+      height: 64px;
+    }
+    .newsletter-form {
+      padding: 28px 20px;
+    }
+    .newsletter-form h2 {
+      font-size: 22px;
+    }
+    .topics-track {
+      gap: 20px;
+    }
+    .topic-item {
+      width: 260px;
+    }
+    .topic-item-image {
+      height: 160px;
+    }
+    .section-heading {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+    .blog-thumb {
+      height: 180px;
+    }
+    .blog-body {
+      padding: 20px 18px 16px;
+    }
+    .faq-left h2 {
+      font-size: 24px;
+    }
+    .faq-question {
+      padding: 14px 16px;
+      font-size: 14px;
+    }
+    .faq-checks {
+      flex-direction: column;
+      gap: 14px;
+    }
+    .marquee-item img {
+      height: 22px;
+    }
+    .marquee-track {
+      gap: 30px;
+    }
+    .footer {
+      padding: 36px 16px 20px;
+    }
+    .footer-bottom {
+      font-size: 12px;
+    }
+  }
+
+</style>
+
+<body>
+
+  <!-- ══════════════════════════════════════════════════
+       HEADER
+       ══════════════════════════════════════════════════ -->
+  <header class="header" id="header">
+    <div class="header-inner">
+
+      <a href="https://affiliateprograms.buzz/" class="logo">
+        <img src="https://vcim.net/extra_mailer3/596_d432bf7d-8a61-420f-844d-994f42736289.png" alt="VCommission" class="logo-img">
+      </a>
+
+      <nav class="nav">
+        <a href="https://affiliateprograms.buzz/">Home</a>
+<a href="https://www.vcommission.com/affiliates/">Affiliates</a>
+<a href="https://www.vcommission.com/advertisers/">Advertisers</a>
+        <a href="https://affiliateprograms.buzz/affiliate-programs/">Affiliate Programs</a>
+        <a href="https://affiliateprograms.buzz/blog/">Blog</a>
+        <a href="https://www.vcommission.com/case-studies/">Case Studies</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#" class="cta-btn">
+          GET STARTED
+          <i class="fa-solid fa-arrow-right-from-square"></i>
+        </a>
+        <button class="menu-toggle" onclick="document.querySelector('.nav').classList.toggle('show')">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- ══════════════════════════════════════════════════
+       HERO
+       ══════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+    
+   <h1>
+        <span class="hl">High Paying</span><br>
+        Affiliate Programs<br>
+        All in One Place
+      </h1>
+      <p class="hero-desc">
+       Looking for affiliate programs that don’t waste your time? You’re in the right place. We keep it simple—just the best ones that pay.
+      </p>
+      <div class="hero-cta-row">
+<p>
+Compare commissions, payouts, and platforms before you join.
+      </p>
+        <a href="https://www.vcommission.com/affiliate/signup" class="hero-btn-primary">Be a Affiliate →</a>
+          <a href="https://www.vcommission.com/advertiser/signup/" class="hero-btn-primary">Become a Advertiser →</a>
+      
+          
+       
+        
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <svg class="hero-connector" viewBox="0 0 400 300" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M 0 150 Q 120 150 160 80 T 400 60" stroke="#cdbfe8" stroke-width="1.5" fill="none" stroke-dasharray="0"/>
+      </svg>
+      <img class="hero-illustration" src="https://vcim.net/extra_mailer3/529_hero-image-3.png" alt="SEO analytics illustration">
+    </div>
+  </div>
+</section>
+
+  <!-- ══════════════════════════════════════════════════
+       PREFERRED CAMPAIGNS
+       ══════════════════════════════════════════════════ -->
+  <section class="affiliate-programs-section">
+
+    <div class="ap-header">
+      <h2>Top Campaigns</h2>
+      <p class="ap-subtitle">Discover some of the best affiliate programs to boost your earnings.</p>
+    </div>
+
+    <div class="ap-slider-wrapper">
+
+      <button class="ap-arrow ap-arrow-left" onclick="document.getElementById('apSlider').scrollBy({left: -300, behavior: 'smooth'})">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <div class="ap-slider" id="apSlider">
+
+        <div class="ap-card">
+          <div class="ap-card-logo"><img src="https://www.vcommission.com/wp-content/uploads/2020/12/client_logo19-1.png"></div>
+          <h3 class="ap-card-name">Amazon Associates</h3>
+          <span class="ap-card-tag tag-blue">Global Market</span>
+          <p class="ap-card-payout">Up to <strong>12%</strong> payout</p>
+        </div>
+
+        <div class="ap-card">
+          <div class="ap-card-logo"><img src="https://static.vnative.co/images/65c349ed0669b.png"></div>
+          <h3 class="ap-card-name">Shopsy.in</h3>
+          <span class="ap-card-tag tag-orange">High Commission</span>
+          <p class="ap-card-payout">Up to <strong>9%</strong> payout</p>
+        </div>
+
+        <div class="ap-card">
+          <div class="ap-card-logo"><img src="https://www.vcommission.com/wp-content/uploads/2020/12/client_logo18-1.png"></div>
+          <h3 class="ap-card-name">Myntra Partners</h3>
+          <span class="ap-card-tag tag-green">Beginner Friendly</span>
+          <p class="ap-card-payout">Up to <strong>8%</strong> payout</p>
+        </div>
+
+        <div class="ap-card">
+          <div class="ap-card-logo"><img src="https://www.vcommission.com/wp-content/uploads/2020/12/client_logo6-1.png"></div>
+          <h3 class="ap-card-name">Agoda Travel</h3>
+          <span class="ap-card-tag tag-purple">Trusted Network</span>
+          <p class="ap-card-payout">Up to <strong>5%</strong> payout</p>
+        </div>
+
+        <div class="ap-card">
+          <div class="ap-card-logo"><img src="https://www.vcommission.com/wp-content/uploads/2020/12/client_logo10.png"></div>
+          <h3 class="ap-card-name">MakeMyTrip</h3>
+          <span class="ap-card-tag tag-blue">Global Market</span>
+          <p class="ap-card-payout">Up to <strong>₹300</strong> payout</p>
+        </div>
+
+        <div class="ap-card">
+          <div class="ap-card-logo"><img src="https://www.vcommission.com/wp-content/uploads/2020/12/client_logo11.png"></div>
+          <h3 class="ap-card-name">GoDaddy Affiliates</h3>
+          <span class="ap-card-tag tag-orange">High Commission</span>
+          <p class="ap-card-payout">Up to <strong>7%</strong> payout</p>
+        </div>
+
+        <div class="ap-card">
+          <div class="ap-card-logo"><img src="https://www.vcommission.com/wp-content/uploads/2020/12/client_logo12.png"></div>
+          <h3 class="ap-card-name">Fiverr Affiliates</h3>
+          <span class="ap-card-tag tag-green">Beginner Friendly</span>
+          <p class="ap-card-payout">Up to <strong>$120</strong> per referral</p>
+        </div>
+
+        <div class="ap-card">
+          <div class="ap-card-logo"><img src="https://www.vcommission.com/wp-content/uploads/2020/12/client_logo5.png"></div>
+          <h3 class="ap-card-name">Walmart Affiliates</h3>
+          <span class="ap-card-tag tag-purple">Trusted Network</span>
+          <p class="ap-card-payout">Up to <strong>5.1%</strong> payout</p>
+        </div>
+
+        <div class="ap-card">
+          <div class="ap-card-logo"><img src="https://static.vnative.co/images/69a9618b1925c.jpg"></div>
+          <h3 class="ap-card-name">Honor.com</h3>
+          <span class="ap-card-tag tag-blue">Global Market</span>
+          <p class="ap-card-payout">Up to <strong>4%</strong> payout</p>
+        </div>
+
+        <div class="ap-card">
+          <div class="ap-card-logo"><img src="https://www.vcommission.com/wp-content/uploads/2020/12/client_logo4.png"></div>
+          <h3 class="ap-card-name">Shopee Affiliates</h3>
+          <span class="ap-card-tag tag-orange">High Commission</span>
+          <p class="ap-card-payout">Up to <strong>7%</strong> payout</p>
+        </div>
+
+      </div>
+
+      <button class="ap-arrow ap-arrow-right" onclick="document.getElementById('apSlider').scrollBy({left: 300, behavior: 'smooth'})">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+       NEWSLETTER
+       ══════════════════════════════════════════════════ -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-grid">
+
+        <div class="newsletter-image">
+          <img src="https://vcim.net/extra_mailer3/277_istockphoto-1969628114-612x612.jpg" alt="newsletter">
+        </div>
+
+        <div class="newsletter-form">
+          <h2>Subscribe To Our Newsletter</h2>
+          <p>Stay ahead of the curve. Get the latest insights, strategies, and trends delivered straight to your inbox every week.</p>
+          <form name="subscribe-form" class="newsletter-input-row">
+            <input type="email" name="Email" placeholder="Your email here" required>
+            <button type="submit" class="newsletter-submit">Submit →</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+       CASE STUDIES
+       ══════════════════════════════════════════════════ -->
+  <section class="topics">
+    <div class="container">
+      <div class="section-title">
+        <h2>Case Studies</h2>
+        <p>Discover how we drives brands to meet their performance targets with excellence.</p>
+      </div>
+    </div>
+
+    <div class="topics-slider-wrap">
+      <div class="topics-track">
+
+        <a href="https://www.vcommission.com/case-studies/food-warming-tray-case-study" class="topic-item">
+          <div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/uploads/2026/03/List_page.jpg" alt="Slursh"></div>
+          <div class="topic-item-footer">
+            <div class="topic-item-text"><h3>Slursh</h3><span>Food Warming Tray</span></div>
+            <div class="topic-item-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </a>
+
+        <a href="https://www.vcommission.com/case-studies/airhelp-case-study/" class="topic-item">
+          <div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/uploads/2025/09/Thumbnail-1.jpg" alt="AirHelp"></div>
+          <div class="topic-item-footer">
+            <div class="topic-item-text"><h3>AirHelp</h3><span>Optimized Affiliate Strategy</span></div>
+            <div class="topic-item-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </a>
+
+        <a href="https://www.vcommission.com/case-studies/hostinger-case-study/" class="topic-item">
+          <div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/uploads/2025/08/Thumbnail_hostinger.jpg" alt="Hostinger"></div>
+          <div class="topic-item-footer">
+            <div class="topic-item-text"><h3>Hostinger</h3><span>Bring Your Idea Online</span></div>
+            <div class="topic-item-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </a>
+
+        <a href="https://www.vcommission.com/slursh-case-study/" class="topic-item">
+          <div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/themes/vcommission/casestudies/img/case/slursh_banner.png?1" alt="Slursh"></div>
+          <div class="topic-item-footer">
+            <div class="topic-item-text"><h3>Slursh</h3><span>Ice Cream Maker Tray</span></div>
+            <div class="topic-item-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </a>
+
+        <a href="https://www.vcommission.com/case-studies/skimmylo-case-study/" class="topic-item">
+          <div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/themes/vcommission/casestudies/img/skymlo.png?1" alt="Skimmylo"></div>
+          <div class="topic-item-footer">
+            <div class="topic-item-text"><h3>Skimmylo</h3><span>Backless Shapewear Bodysuit</span></div>
+            <div class="topic-item-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </a>
+
+        <a href="https://www.vcommission.com/case-studies/elementor/" class="topic-item">
+          <div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/themes/vcommission/casestudies/img/case/ele.jpg?1" alt="Elementor"></div>
+          <div class="topic-item-footer">
+            <div class="topic-item-text"><h3>Elementor</h3><span>The popular website builder</span></div>
+            <div class="topic-item-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </a>
+
+        <a href="https://www.vcommission.com/case-studies/mx-player-case-study/" class="topic-item">
+          <div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/themes/vcommission/casestudies/img/case/mx.jpg" alt="MX Player"></div>
+          <div class="topic-item-footer">
+            <div class="topic-item-text"><h3>Amazon MX Player</h3><span>Free video streaming service</span></div>
+            <div class="topic-item-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </a>
+
+        <a href="https://www.vcommission.com/case-studies/myntra-case-study/" class="topic-item">
+          <div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/themes/vcommission/casestudies/img/case/myntra.png" alt="Myntra"></div>
+          <div class="topic-item-footer">
+            <div class="topic-item-text"><h3>Myntra</h3><span>Fashion &amp; lifestyle platform</span></div>
+            <div class="topic-item-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </a>
+
+        <!-- Duplicated for seamless loop -->
+        <a href="#" class="topic-item"><div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/uploads/2026/03/List_page.jpg" alt="Slursh"></div><div class="topic-item-footer"><div class="topic-item-text"><h3>Slursh</h3><span>Food Warming Tray</span></div><div class="topic-item-arrow"><i class="fa-solid fa-arrow-right"></i></div></div></a>
+        <a href="#" class="topic-item"><div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/uploads/2025/09/Thumbnail-1.jpg" alt="AirHelp"></div><div class="topic-item-footer"><div class="topic-item-text"><h3>AirHelp</h3><span>Optimized Affiliate Strategy</span></div><div class="topic-item-arrow"><i class="fa-solid fa-arrow-right"></i></div></div></a>
+        <a href="#" class="topic-item"><div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/uploads/2025/08/Thumbnail_hostinger.jpg" alt="Hostinger"></div><div class="topic-item-footer"><div class="topic-item-text"><h3>Hostinger</h3><span>Bring Your Idea Online</span></div><div class="topic-item-arrow"><i class="fa-solid fa-arrow-right"></i></div></div></a>
+        <a href="#" class="topic-item"><div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/themes/vcommission/casestudies/img/case/slursh_banner.png?1" alt="Slursh"></div><div class="topic-item-footer"><div class="topic-item-text"><h3>Slursh</h3><span>Ice Cream Maker Tray</span></div><div class="topic-item-arrow"><i class="fa-solid fa-arrow-right"></i></div></div></a>
+        <a href="#" class="topic-item"><div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/themes/vcommission/casestudies/img/skymlo.png?1" alt="Skimmylo"></div><div class="topic-item-footer"><div class="topic-item-text"><h3>Skimmylo</h3><span>Backless Shapewear Bodysuit</span></div><div class="topic-item-arrow"><i class="fa-solid fa-arrow-right"></i></div></div></a>
+        <a href="#" class="topic-item"><div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/themes/vcommission/casestudies/img/case/ele.jpg?1" alt="Elementor"></div><div class="topic-item-footer"><div class="topic-item-text"><h3>Elementor</h3><span>The popular website builder</span></div><div class="topic-item-arrow"><i class="fa-solid fa-arrow-right"></i></div></div></a>
+        <a href="#" class="topic-item"><div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/themes/vcommission/casestudies/img/case/mx.jpg" alt="MX Player"></div><div class="topic-item-footer"><div class="topic-item-text"><h3>Amazon MX Player</h3><span>Free video streaming service</span></div><div class="topic-item-arrow"><i class="fa-solid fa-arrow-right"></i></div></div></a>
+        <a href="#" class="topic-item"><div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/themes/vcommission/casestudies/img/case/myntra.png" alt="Myntra"></div><div class="topic-item-footer"><div class="topic-item-text"><h3>Myntra</h3><span>Fashion &amp; lifestyle platform</span></div><div class="topic-item-arrow"><i class="fa-solid fa-arrow-right"></i></div></div></a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+       BLOG
+       ══════════════════════════════════════════════════ -->
+  <section class="blog">
+    <div class="container" style="text-align:center;">
+
+      <span class="section-tag-light">Events News</span>
+      <h2 class="section-heading">Our Trending News</h2>
+
+      <div class="blog-grid">
+
+<article class="blog-card">
+  <div class="blog-thumb"><img src="https://vcim.net/extra_mailer3/447_qorfit-affiliate-program.png"></div>
+  <div class="blog-body">
+    <h3>Qorfit Pulse Affiliate Program: How to Earn Promoting India's Smartest Health Tracker</h3>
+    <p>Join the Qorfit Pulse Affiliate Program and earn by promoting India’s smart health tracker...</p>
+    <div class="blog-footer"><div class="blog-date"><strong>21</strong><span>APR</span></div><a href="https://affiliateprograms.buzz/blog/qorfit-pulse-affiliate-program/" class="read-more">Read More <i class="fa-solid fa-angles-right"></i></a></div>
+  </div>
+</article>
+
+<article class="blog-card">
+  <div class="blog-thumb"><img src="https://vcim.net/extra_mailer3/430_LegalZoom-affiliate-program.png"></div>
+  <div class="blog-body">
+    <h3>LegalZoom Affiliate Program: High-Ticket Legal Offers That Pay</h3>
+    <p>Explore the LegalZoom Affiliate Program and earn commissions by promoting high-ticket legal services...</p>
+    <div class="blog-footer"><div class="blog-date"><strong>21</strong><span>APR</span></div><a href="https://affiliateprograms.buzz/blog/legalzoom-affiliate-program/" class="read-more">Read More <i class="fa-solid fa-angles-right"></i></a></div>
+  </div>
+</article>
+
+<article class="blog-card">
+  <div class="blog-thumb"><img src="https://vcim.net/extra_mailer3/39_YesStyle-affiliate-program.png"></div>
+  <div class="blog-body">
+    <h3>YesStyle Affiliate Program: Earn From K-Beauty and Asian Fashion</h3>
+    <p>Join the YesStyle Affiliate Program and earn commissions by promoting K-beauty and Asian fashion...</p>
+    <div class="blog-footer"><div class="blog-date"><strong>21</strong><span>APR</span></div><a href="https://affiliateprograms.buzz/blog/yesstyle-affiliate-program/" class="read-more">Read More <i class="fa-solid fa-angles-right"></i></a></div>
+  </div>
+</article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+       FAQ
+       ══════════════════════════════════════════════════ -->
+  <section class="faq">
+    <div class="container">
+      <div class="faq-grid">
+
+        <div class="faq-left">
+          <span class="faq-tag">FAQ'S</span>
+          <h2>Find the Best Affiliate Programs to Grow Your Income</h2>
+          <p>We’re not just another directory — we help you discover profitable affiliate programs with real earning potential. Whether you're a blogger, marketer, or beginner, our platform provides detailed insights, commission structures, and honest reviews to help you make smarter decisions.</p>
+          <div class="faq-checks">
+            <div class="faq-check"><i class="fa-solid fa-circle-check"></i> Verified & Trusted Programs</div>
+            <div class="faq-check"><i class="fa-solid fa-circle-check"></i> High Commission Opportunities</div>
+            <div class="faq-check"><i class="fa-solid fa-circle-check"></i> Beginner-Friendly Options</div>
+            <div class="faq-check"><i class="fa-solid fa-circle-check"></i> Regularly Updated Listings</div>
+
+          </div>
+        </div>
+
+        <div class="faq-list" id="faqList">
+
+<div class="faq-item" data-faq="0">
+  <button class="faq-question" onclick="toggleFaq(0)">
+    What is an affiliate program?
+    <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+  </button>
+  <div class="faq-answer">
+    <p>An affiliate program allows individuals to earn commissions by promoting products or services. You earn money when someone makes a purchase or completes an action through your referral link.</p>
+  </div>
+</div>
+
+<div class="faq-item" data-faq="1">
+  <button class="faq-question" onclick="toggleFaq(1)">
+    Which affiliate programs pay the highest commissions?
+    <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+  </button>
+  <div class="faq-answer">
+    <p>High-paying affiliate programs are usually found in SaaS, finance, and web hosting niches. Some programs offer recurring commissions or payouts up to 50% or more.</p>
+  </div>
+</div>
+
+<div class="faq-item" data-faq="2">
+  <button class="faq-question" onclick="toggleFaq(2)">
+    How can beginners start affiliate marketing?
+    <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+  </button>
+  <div class="faq-answer">
+    <p>Beginners can start by choosing a niche, joining affiliate programs, and promoting products through blogs, social media, or YouTube. Consistent content and traffic are key to success.</p>
+  </div>
+</div>
+
+<div class="faq-item" data-faq="3">
+  <button class="faq-question" onclick="toggleFaq(3)">
+    Are affiliate programs free to join?
+    <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+  </button>
+  <div class="faq-answer">
+    <p>Yes, most affiliate programs are completely free to join. You just need to sign up, get approved, and start promoting using your unique affiliate links.</p>
+  </div>
+</div>
+
+<div class="faq-item" data-faq="4">
+  <button class="faq-question" onclick="toggleFaq(4)">
+    How do I choose the best affiliate program?
+    <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+  </button>
+  <div class="faq-answer">
+    <p>Look for programs with good commission rates, reliable payouts, strong reputation, and products relevant to your audience. Cookie duration and support also matter.</p>
+  </div>
+</div>
+
+<div class="faq-item" data-faq="5">
+  <button class="faq-question" onclick="toggleFaq(5)">
+    How much can you earn from affiliate marketing?
+    <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+  </button>
+  <div class="faq-answer">
+    <p>Earnings vary widely depending on your traffic, niche, and strategy. Some beginners earn a few dollars, while experienced affiliates can generate thousands per month.</p>
+  </div>
+</div>
+
+
+
+<div class="faq-item" data-faq="7">
+  <button class="faq-question" onclick="toggleFaq(7)">
+    What is a cookie duration in affiliate marketing?
+    <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+  </button>
+  <div class="faq-answer">
+    <p>Cookie duration is the time period in which you can earn a commission after someone clicks your affiliate link. Longer durations increase your chances of earning commissions.</p>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+       LOGO MARQUEE
+       ══════════════════════════════════════════════════ -->
+  <section class="marquee-section">
+    <div class="marquee-header">
+      <div class="line"></div>
+      <p>Top Affiliate Networks</p>
+      <div class="line"></div>
+    </div>
+
+    <div style="overflow:hidden;">
+      <div class="marquee-track">
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/868_vcommission-logo.png" alt="vCommission"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/740_trackier_logo.png" alt="Trackier"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/315_share-a-sale-logo.png" alt="ShareASale"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/697_rakuten-logo.png" alt="Rakuten"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/868_vcommission-logo.png" alt="vCommission"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/975_partnerizelogo.png" alt="Partnerize"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/141_optimise-logo.png" alt="Optimise"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/557_offer18-logo.png" alt="Offer18"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/868_vcommission-logo.png" alt="vCommission"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/569_maxbounty-logo.png" alt="MaxBounty"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/183_impact-affiliate-conversion-integration-via-api.png" alt="Impact"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/743_cuelinks-logo.png" alt="Cuelinks"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/868_vcommission-logo.png" alt="vCommission"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/224_clickbank-logo.png" alt="ClickBank"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/304_cj-affiliate-conversion-integration-via-api-1.png" alt="CJ Affiliate"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/165_awin-affiliate-conversion-integration-via-api.png" alt="Awin"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/868_vcommission-logo.png" alt="vCommission"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/789_amazon-associates-logo.png" alt="Amazon Associates"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/885_admitad-logo.png" alt="Admitad"></div>
+        <!-- Doubled for loop -->
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/868_vcommission-logo.png" alt="vCommission"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/740_trackier_logo.png" alt="Trackier"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/315_share-a-sale-logo.png" alt="ShareASale"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/697_rakuten-logo.png" alt="Rakuten"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/868_vcommission-logo.png" alt="vCommission"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/975_partnerizelogo.png" alt="Partnerize"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/141_optimise-logo.png" alt="Optimise"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/557_offer18-logo.png" alt="Offer18"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/868_vcommission-logo.png" alt="vCommission"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/569_maxbounty-logo.png" alt="MaxBounty"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/183_impact-affiliate-conversion-integration-via-api.png" alt="Impact"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/743_cuelinks-logo.png" alt="Cuelinks"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/868_vcommission-logo.png" alt="vCommission"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/224_clickbank-logo.png" alt="ClickBank"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/304_cj-affiliate-conversion-integration-via-api-1.png" alt="CJ Affiliate"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/165_awin-affiliate-conversion-integration-via-api.png" alt="Awin"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/868_vcommission-logo.png" alt="vCommission"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/789_amazon-associates-logo.png" alt="Amazon Associates"></div>
+        <div class="marquee-item"><img src="https://vcim.net/extra_mailer3/885_admitad-logo.png" alt="Admitad"></div>      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+       FOOTER
+       ══════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <a href="#" style="margin-bottom:16px; display:inline-block;">
+          <img src="https://vcim.net/extra_mailer3/596_d432bf7d-8a61-420f-844d-994f42736289.png" alt="VCommission" class="footer-logo-img">
+        </a>
+        <p>Discover the best affiliate programs across SaaS, finance, e-commerce and more. Compare commissions, payouts, and join high-paying affiliate programs easily.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <div class="footer-links">
+        <a href="https://affiliateprograms.buzz/">Home</a>
+<a href="https://www.vcommission.com/affiliates/">Affiliates</a>
+<a href="https://www.vcommission.com/advertisers/">Advertisers</a>
+        <a href="https://affiliateprograms.buzz/affiliate-programs/">Affiliate Programs</a>
+        <a href="https://affiliateprograms.buzz/blog/">Blog</a>
+  
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Subscribe for Updates</h3>
+        <p>Get the latest news and insights delivered to your inbox. No spam, just value.</p>
+        <form name="footer-subscribe-form" class="footer-email-row">
+          <input type="email" name="Email" placeholder="Your Email Address" required>
+          <button type="submit">→</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 AffiliatePrograms.buzz All rights reserved.</span>
+    </div>
+  </footer>
+
+
+  <!-- ══════════════════════════════════════════════════
+       SCRIPTS
+       ══════════════════════════════════════════════════ -->
+  <script>
+
+    /* ── Auto-slide ── */
+    function initAutoSlider(trackId, intervalMs) {
+      var track = document.getElementById(trackId);
+      if (!track) return;
+      var paused = false;
+      track.addEventListener('mouseenter', function() { paused = true; });
+      track.addEventListener('mouseleave', function() { paused = false; });
+      track.addEventListener('touchstart', function() { paused = true; }, { passive: true });
+      track.addEventListener('touchend', function() { setTimeout(function() { paused = false; }, 2000); });
+      setInterval(function() {
+        if (paused) return;
+        var card = track.querySelector(':scope > *');
+        if (!card) return;
+        var cardWidth = card.offsetWidth + 24;
+        var maxScroll = track.scrollWidth - track.clientWidth;
+        if (track.scrollLeft >= maxScroll - 10) {
+          track.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        }
+      }, intervalMs);
+    }
+
+    initAutoSlider('apSlider', 3200);
+
+
+    /* ── Header scroll ── */
+    var header = document.getElementById('header');
+    window.addEventListener('scroll', function() {
+      if (header) {
+        header.classList.toggle('scrolled', window.scrollY > 40);
+      }
+    });
+
+
+    /* ── FAQ Accordion ── */
+    function toggleFaq(index) {
+      var items = document.querySelectorAll('.faq-item');
+      for (var i = 0; i < items.length; i++) {
+        var answer = items[i].querySelector('.faq-answer');
+        if (i === index && !items[i].classList.contains('active')) {
+          items[i].classList.add('active');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        } else {
+          items[i].classList.remove('active');
+          answer.style.maxHeight = '0';
+        }
+      }
+    }
+
+
+    /* ── Newsletter (Main) ── */
+    var scriptURL1 = 'https://script.google.com/macros/s/AKfycby_x2S0pOEQL2zCzTXydrx2h_zZm2HPx3VFQUASZpYLUGBD9EvhsycpI644qKPHIFhe/exec';
+
+    var form1 = document.querySelector('form[name="subscribe-form"]');
+    if (form1) {
+      form1.addEventListener('submit', function(e) {
+        if (form1.checkValidity()) {
+          e.preventDefault();
+          var btn = form1.querySelector('button[type="submit"]');
+          btn.disabled = true;
+          var originalText = btn.innerText;
+          btn.innerText = 'Processing...';
+          fetch(scriptURL1, { method: 'POST', mode: 'no-cors', body: new FormData(form1) })
+            .then(function() { alert("Thank you for signing up!"); form1.reset(); })
+            .catch(function() { alert("Something went wrong."); })
+            .finally(function() { btn.disabled = false; btn.innerText = originalText; });
+        }
+      });
+    }
+
+
+    /* ── Newsletter (Footer) ── */
+    var form2 = document.querySelector('form[name="footer-subscribe-form"]');
+    if (form2) {
+      form2.addEventListener('submit', function(e) {
+        if (form2.checkValidity()) {
+          e.preventDefault();
+          var btn = form2.querySelector('button[type="submit"]');
+          btn.disabled = true;
+          var originalText = btn.innerText;
+          btn.innerText = '...';
+          fetch(scriptURL1, { method: 'POST', mode: 'no-cors', body: new FormData(form2) })
+            .then(function() { alert("Thank you for signing up!"); form2.reset(); })
+            .catch(function() { alert("Something went wrong."); })
+            .finally(function() { btn.disabled = false; btn.innerText = originalText; });
+        }
+      });
+    }
+
+
+    /* ── Scroll fade-in ── */
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.blog-card, .faq-item, .newsletter-grid > *, .ap-card').forEach(function(el) {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+
+  </script>
+
+</body>
+</html>
