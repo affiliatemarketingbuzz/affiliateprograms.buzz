@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - AffiliatePrograms.buzz</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+
+<style>
+
+  /* ════════════════════════════════════════════════
+     RESET & VARIABLES
+     ════════════════════════════════════════════════ */
+
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --primary: #4318D1;
+    --primary-dark: #1a0a5c;
+    --accent: #c1ff00;
+    --dark: #0f0a2e;
+    --white: #ffffff;
+    --light: #f5f3ff;
+    --gray: #6b7280;
+    --gray-light: #e5e7eb;
+    --blue: #2563eb;
+    --orange: #ff6b35;
+    --purple-bg: #f0ecf9;
+    --font-display: 'Outfit', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --max-w: 1280px;
+    --px: clamp(1rem, 4vw, 3rem);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--dark);
+    overflow-x: hidden;
+    background: #fff;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  button {
+    cursor: pointer;
+    font-family: var(--font-display);
+  }
+
+  input {
+    font-family: var(--font-body);
+  }
+
+  .container {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 var(--px);
+  }
+
+
+  /* ════════════════════════════════════════════════
+     HEADER (exact from landing page)
+     ════════════════════════════════════════════════ */
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 0 var(--px);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+  }
+
+  .header-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 74px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-img {
+    height: 38px;
+    width: auto;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .nav a {
+    color: var(--dark);
+    font-size: 15px;
+    font-weight: 500;
+    font-family: var(--font-display);
+    transition: color 0.25s;
+  }
+
+  .nav a:hover {
+    color: #1a4fd6;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #1a4fd6;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    font-family: var(--font-display);
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+
+  .cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(26, 79, 214, 0.35);
+  }
+
+  .cta-btn i {
+    font-size: 12px;
+    margin-left: 4px;
+  }
+
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    z-index: 101;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--dark);
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .nav.show {
+    display: flex !important;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px 24px 28px;
+    gap: 0;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    animation: slideDown 0.3s ease;
+  }
+
+  .nav.show a {
+    padding: 14px 0;
+    font-size: 16px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .nav.show a:last-child {
+    border-bottom: none;
+  }
+
+
+  /* ════════════════════════════════════════════════
+     BLOG HERO BANNER
+     ════════════════════════════════════════════════ */
+
+  .blog-hero {
+    background: var(--purple-bg);
+    padding: 160px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .blog-hero::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: -80px;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: rgba(67, 24, 209, 0.06);
+  }
+
+  .blog-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: rgba(67, 24, 209, 0.05);
+  }
+
+  .blog-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    font-weight: 900;
+    color: var(--dark);
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+  }
+
+  .breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 28px;
+    border: 1.5px solid rgba(67, 24, 209, 0.2);
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+  }
+
+  .breadcrumb a {
+    color: var(--primary);
+    font-weight: 600;
+  }
+
+  .breadcrumb i {
+    color: var(--primary);
+    font-size: 12px;
+  }
+
+  .hero-deco {
+    position: absolute;
+    font-size: 56px;
+    opacity: 0.4;
+    z-index: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .hero-deco.left {
+    left: 5%;
+  }
+
+  .hero-deco.right {
+    right: 5%;
+  }
+
+
+  /* ════════════════════════════════════════════════
+     FEATURED POST + SIDEBAR
+     ════════════════════════════════════════════════ */
+
+  .blog-content {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 60px var(--px) 40px;
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 50px;
+    align-items: start;
+  }
+
+  /* Featured post */
+  .featured-post {
+    border-radius: 18px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+    transition: opacity 0.3s;
+  }
+
+  .featured-post.search-hidden {
+    display: none;
+  }
+
+  .featured-post-image {
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+  }
+
+  .featured-post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+
+  .featured-post:hover .featured-post-image img {
+    transform: scale(1.03);
+  }
+
+  .featured-post-body {
+    padding: 32px 36px 36px;
+  }
+
+  .featured-post-body h2 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--dark);
+    margin-bottom: 16px;
+    line-height: 1.3;
+  }
+
+  .featured-post-meta {
+    display: flex;
+    gap: 24px;
+    font-size: 0.88rem;
+    color: var(--gray);
+    margin-bottom: 18px;
+  }
+
+  .featured-post-excerpt {
+    font-size: 1.05rem;
+    color: var(--gray);
+    line-height: 1.75;
+    margin-bottom: 24px;
+  }
+
+  .featured-read-more {
+    color: var(--orange);
+    font-weight: 700;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.3s;
+  }
+
+  .featured-read-more:hover {
+    gap: 12px;
+  }
+
+  /* Search results area */
+  .search-results-area {
+    display: none;
+  }
+
+  .search-results-area.active {
+    display: block;
+  }
+
+  .search-results-area h2 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--dark);
+    margin-bottom: 24px;
+  }
+
+  .search-result-card {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .search-result-card:last-child {
+    border-bottom: none;
+  }
+
+.search-result-card img {
+  width: 150px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+  .search-result-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.35;
+    margin-bottom: 6px;
+  }
+
+  .search-result-card h4 a {
+    color: var(--dark);
+    transition: color 0.2s;
+  }
+
+  .search-result-card h4 a:hover {
+    color: var(--primary);
+  }
+
+  .search-result-card span {
+    font-size: 0.8rem;
+    color: var(--gray);
+  }
+
+  .search-no-match {
+    padding: 20px 0;
+    color: var(--gray);
+    font-size: 1rem;
+  }
+
+
+  /* ════════════════════════════════════════════════
+     SIDEBAR
+     ════════════════════════════════════════════════ */
+
+  .sidebar {
+    position: sticky;
+    top: 120px;
+  }
+
+  .sidebar-search {
+    margin-bottom: 40px;
+  }
+
+  .sidebar-search h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 16px;
+  }
+
+  .search-form {
+    display: flex;
+    gap: 0;
+    position: relative;
+  }
+
+  .search-form input {
+    flex: 1;
+    padding: 14px 18px;
+    border: 2px solid var(--gray-light);
+    border-right: none;
+    border-radius: 12px 0 0 12px;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    outline: none;
+    color: var(--dark);
+    transition: border-color 0.3s;
+  }
+
+  .search-form input:focus {
+    border-color: var(--primary);
+  }
+
+  .search-form input::placeholder {
+    color: var(--gray);
+  }
+
+  .search-form button {
+    padding: 14px 20px;
+    background: var(--primary);
+    color: var(--white);
+    border: 2px solid var(--primary);
+    border-radius: 0 12px 12px 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+  }
+
+  .search-form button:hover {
+    background: var(--primary-dark);
+  }
+
+  /* Live search dropdown */
+  .search-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: calc(100% + 2px);
+    margin-left: -1px;
+    background: var(--white);
+    border-radius: 0 0 14px 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    z-index: 50;
+    max-height: 420px;
+    overflow-y: auto;
+    display: none;
+  }
+
+  .search-dropdown.open {
+    display: block;
+  }
+
+  .search-dropdown-item {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 10px 14px;
+    color: var(--dark);
+    transition: background 0.15s;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  }
+
+  .search-dropdown-item:last-child {
+    border-bottom: none;
+  }
+
+  .search-dropdown-item:hover {
+    background: var(--purple-bg);
+  }
+
+  .search-dropdown-item img {
+    width: 120px;
+    height: 70px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .search-dropdown-item span {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--dark);
+    line-height: 1.3;
+  }
+
+  .search-dropdown-none {
+    padding: 14px;
+    font-size: 0.88rem;
+    color: var(--gray);
+    text-align: center;
+  }
+
+  /* Recent posts */
+  .sidebar-recent h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 20px;
+  }
+
+  .recent-post {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s;
+  }
+
+  .recent-post:hover {
+    transform: translateX(4px);
+  }
+
+  .recent-post:last-child {
+    border-bottom: none;
+  }
+
+.recent-post-img {
+  width: 126px;
+  height: 72px;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+  .recent-post-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .recent-post-info h4 {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.35;
+    margin-bottom: 6px;
+  }
+
+  .recent-post-info h4 a {
+    color: var(--dark);
+    transition: color 0.2s;
+  }
+
+  .recent-post-info h4 a:hover {
+    color: var(--primary);
+  }
+
+  .recent-post-info span {
+    font-size: 0.8rem;
+    color: var(--primary);
+    font-weight: 500;
+  }
+
+
+  /* ════════════════════════════════════════════════
+     ALL POSTS — FULL WIDTH 2-COL
+     ════════════════════════════════════════════════ */
+
+  .all-posts-section {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 20px var(--px) 80px;
+  }
+
+  .all-posts-heading {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--dark);
+    margin-bottom: 40px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--purple-bg);
+  }
+
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+  }
+
+  .post-card {
+    background: var(--white);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  .post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  .post-card.hidden-post {
+    display: none;
+  }
+
+  .post-card-image {
+    height: 320px;
+    overflow: hidden;
+  }
+
+  .post-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+
+  .post-card:hover .post-card-image img {
+    transform: scale(1.04);
+  }
+
+  .post-card-body {
+    padding: 28px 30px 32px;
+  }
+
+  .post-card-meta {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .post-card-tag {
+    background: var(--orange);
+    color: var(--white);
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .post-card-date {
+    font-size: 0.85rem;
+    color: var(--gray);
+  }
+
+  .post-card-body h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.35;
+    margin-bottom: 14px;
+  }
+
+  .post-card-body h3 a {
+    color: var(--dark);
+    transition: color 0.2s;
+  }
+
+  .post-card-body h3 a:hover {
+    color: var(--primary);
+  }
+
+  .post-card-excerpt {
+    font-size: 0.95rem;
+    color: var(--gray);
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .post-read-more {
+    color: var(--orange);
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.3s;
+  }
+
+  .post-read-more:hover {
+    gap: 12px;
+  }
+
+  /* Load more */
+  .load-more-wrap {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .load-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 42px;
+    border-radius: 999px;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    font-family: var(--font-body);
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+
+  .load-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(67, 24, 209, 0.3);
+  }
+
+  .load-more-btn.hidden-btn {
+    display: none;
+  }
+
+
+  /* ════════════════════════════════════════════════
+     FOOTER (exact from landing page)
+     ════════════════════════════════════════════════ */
+
+  .footer {
+    background: var(--dark);
+    color: #fff;
+    padding: 68px var(--px) 32px;
+  }
+
+  .footer-grid {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 50px;
+  }
+
+  .footer-brand p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    line-height: 1.75;
+    margin-bottom: 22px;
+    max-width: 290px;
+  }
+
+  .footer-col h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 22px;
+    font-family: var(--font-display);
+  }
+
+  .footer-col h3::after {
+    content: '';
+    display: block;
+    width: 42px;
+    height: 3px;
+    background: var(--blue);
+    border-radius: 2px;
+    margin-top: 14px;
+  }
+
+  .footer-col p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-links a {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 15px;
+    transition: color 0.3s;
+  }
+
+  .footer-links a:hover {
+    color: var(--accent);
+  }
+
+  .footer-email-row {
+    display: flex;
+    margin-top: 18px;
+  }
+
+  .footer-email-row input {
+    flex: 1;
+    padding: 13px 18px;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.04);
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+  }
+
+  .footer-email-row input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .footer-email-row button {
+    background: var(--primary);
+    border: none;
+    color: #fff;
+    padding: 13px 18px;
+    border-radius: 0 8px 8px 0;
+    font-size: 18px;
+    transition: background 0.25s;
+  }
+
+  .footer-email-row button:hover {
+    background: #5a2ee8;
+  }
+
+  .footer-bottom {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 22px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 13px;
+  }
+
+  .footer-logo-img {
+    height: 44px;
+    width: auto;
+    filter: brightness(0) invert(1);
+  }
+
+
+  /* ════════════════════════════════════════════════
+     RESPONSIVE — 1024px
+     ════════════════════════════════════════════════ */
+
+  @media (max-width: 1024px) {
+    .nav {
+      gap: 24px;
+    }
+    .blog-content {
+      grid-template-columns: 1fr 300px;
+      gap: 36px;
+    }
+    .featured-post-image {
+      height: 320px;
+    }
+    .post-card-image {
+      height: 240px;
+    }
+  }
+
+
+  /* ════════════════════════════════════════════════
+     RESPONSIVE — 768px
+     ════════════════════════════════════════════════ */
+
+  @media (max-width: 768px) {
+    .nav {
+      display: none;
+    }
+    .menu-toggle {
+      display: block;
+    }
+    .header-inner {
+      height: 64px;
+    }
+    .logo-img {
+      height: 32px;
+    }
+    .cta-btn {
+      padding: 8px 18px;
+      font-size: 13px;
+    }
+    .blog-hero {
+      padding: 120px 20px 50px;
+    }
+    .blog-hero h1 {
+      font-size: 2rem;
+    }
+    .hero-deco {
+      font-size: 36px;
+      opacity: 0.25;
+    }
+    .blog-content {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .sidebar {
+      position: static;
+    }
+    .featured-post-image {
+      height: 260px;
+    }
+    .featured-post-body {
+      padding: 24px 24px 28px;
+    }
+    .featured-post-body h2 {
+      font-size: 1.4rem;
+    }
+    .posts-grid {
+      grid-template-columns: 1fr;
+    }
+    .post-card-image {
+      height: 240px;
+    }
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+  }
+
+
+  /* ════════════════════════════════════════════════
+     RESPONSIVE — 480px
+     ════════════════════════════════════════════════ */
+
+  @media (max-width: 480px) {
+    .header-inner {
+      height: 58px;
+    }
+    .logo-img {
+      height: 28px;
+    }
+    .cta-btn {
+      padding: 7px 14px;
+      font-size: 12px;
+    }
+    .blog-hero {
+      padding: 100px 16px 36px;
+    }
+    .blog-hero h1 {
+      font-size: 1.7rem;
+    }
+    .breadcrumb {
+      font-size: 13px;
+      padding: 8px 18px;
+    }
+    .hero-deco {
+      display: none;
+    }
+    .featured-post-image {
+      height: 220px;
+    }
+    .featured-post-body {
+      padding: 20px;
+    }
+    .post-card-image {
+      height: 200px;
+    }
+    .post-card-body {
+      padding: 20px 20px 24px;
+    }
+    .post-card-body h3 {
+      font-size: 1.1rem;
+    }
+    .all-posts-heading {
+      font-size: 1.5rem;
+    }
+    .footer {
+      padding: 36px 16px 20px;
+    }
+    .footer-bottom {
+      font-size: 12px;
+    }
+  }
+
+</style>
+
+<body>
+
+  <!-- ══════════════════════════════════════════════════
+       HEADER (exact from landing page)
+       ══════════════════════════════════════════════════ -->
+  <header class="header" id="header">
+    <div class="header-inner">
+
+      <a href="https://affiliateprograms.buzz/" class="logo">
+        <img src="https://vcim.net/extra_mailer3/596_d432bf7d-8a61-420f-844d-994f42736289.png" alt="AffiliatePrograms" class="logo-img">
+      </a>
+
+      <nav class="nav" id="mainNav">
+        <a href="https://affiliateprograms.buzz/">Home</a>
+        <a href="https://www.vcommission.com/affiliates/">Affiliates</a>
+        <a href="https://www.vcommission.com/advertisers/">Advertisers</a>
+        <a href="https://affiliateprograms.buzz/affiliate-programs/">Affiliate Programs</a>
+        <a href="https://affiliateprograms.buzz/blog/">Blog</a>
+        <a href="https://www.vcommission.com/case-studies/">Case Studies</a>
+      </nav>
+
+      <div class="header-actions">
+       
+        <button class="menu-toggle" onclick="document.getElementById('mainNav').classList.toggle('show')">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- ══════════════════════════════════════════════════
+       BLOG HERO
+       ══════════════════════════════════════════════════ -->
+  <section class="blog-hero">
+    <span class="hero-deco left">🏆</span>
+    <span class="hero-deco right">🎯</span>
+    <h1>Blog</h1>
+   
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+       FEATURED POST + SIDEBAR
+       ══════════════════════════════════════════════════ -->
+  <section class="blog-content">
+
+    <div>
+      <!-- Featured Post -->
+<article class="featured-post" id="featuredPost">
+  <div class="featured-post-image">
+    <img src="https://vcim.net/extra_mailer3/447_qorfit-affiliate-program.png" alt="Qorfit Pulse Affiliate Program">
+  </div>
+  <div class="featured-post-body">
+    <h2>Qorfit Pulse Affiliate Program: How to Earn Promoting India's Smartest Health Tracker</h2>
+    
+    <div class="featured-post-meta">
+      <span><i class="fa-regular fa-folder"></i> Affiliate Programs</span>
+      <span><i class="fa-regular fa-calendar"></i> 21 Apr 2026</span>
+    </div>
+    
+    <p class="featured-post-excerpt">
+      Join the Qorfit Pulse Affiliate Program and earn by promoting India’s smart health tracker. Learn how it works, commission details, and tips to maximize your affiliate income.
+    </p>
+    
+    <a href="https://affiliateprograms.buzz/blog/qorfit-pulse-affiliate-program/" class="featured-read-more">
+      Read Full Article →
+    </a>
+  </div>
+</article>
+      
+      <!-- Search Results (hidden by default) -->
+      <div class="search-results-area" id="searchResultsArea">
+        <h2 id="searchResultsTitle">Search Results</h2>
+        <div id="searchResultsList"></div>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+      <div class="sidebar-search">
+        <h3>Search</h3>
+        <div class="search-form" id="searchForm">
+          <input type="text" id="searchInput" placeholder="Type and Search" autocomplete="off">
+          <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <div class="search-dropdown" id="searchDropdown"></div>
+        </div>
+      </div>
+
+      <div class="sidebar-recent">
+        <h3>Recent Posts</h3>
+
+     <div class="recent-post">
+  <div class="recent-post-img"><img src="https://vcim.net/extra_mailer3/447_qorfit-affiliate-program.png"></div>
+  <div class="recent-post-info">
+    <h4><a href="https://affiliateprograms.buzz/blog/qorfit-pulse-affiliate-program/">Qorfit Pulse Affiliate Program: How to Earn Promoting India's Smartest Health Tracker</a></h4>
+    <span><i class="fa-regular fa-folder"></i> Affiliate Programs</span>
+  </div>
+</div>
+
+<div class="recent-post">
+  <div class="recent-post-img"><img src="https://vcim.net/extra_mailer3/430_LegalZoom-affiliate-program.png"></div>
+  <div class="recent-post-info">
+    <h4><a href="https://affiliateprograms.buzz/blog/legalzoom-affiliate-program/">LegalZoom Affiliate Program: High-Ticket Legal Offers That Pay</a></h4>
+    <span><i class="fa-regular fa-folder"></i> Affiliate Programs</span>
+  </div>
+</div>
+
+<div class="recent-post">
+  <div class="recent-post-img"><img src="https://vcim.net/extra_mailer3/39_YesStyle-affiliate-program.png"></div>
+  <div class="recent-post-info">
+    <h4><a href="https://affiliateprograms.buzz/blog/yesstyle-affiliate-program/">YesStyle Affiliate Program: Earn From K-Beauty and Asian Fashion</a></h4>
+    <span><i class="fa-regular fa-folder"></i> Affiliate Programs</span>
+  </div>
+</div>
+      </div>
+
+    </aside>
+
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+       ALL POSTS (full width, 2-col)
+       ══════════════════════════════════════════════════ -->
+  <section class="all-posts-section">
+    <h2 class="all-posts-heading">All Posts</h2>
+
+    <div class="posts-grid" id="postsGrid">
+
+  <article class="post-card" 
+  data-title="LegalZoom Affiliate Program: High-Ticket Legal Offers That Pay" 
+  data-img="https://vcim.net/extra_mailer3/430_LegalZoom-affiliate-program.png" 
+  data-link="https://affiliateprograms.buzz/blog/legalzoom-affiliate-program/">
+  <div class="post-card-image"><img src="https://vcim.net/extra_mailer3/430_LegalZoom-affiliate-program.png" alt="LegalZoom Affiliate Program"></div>
+<div class="post-card-body"><div class="post-card-meta"><span class="post-card-tag">Affiliate Programs</span>
+  <span class="post-card-date">21 Apr 2026</span></div>
+    <h3><a href="https://affiliateprograms.buzz/blog/legalzoom-affiliate-program/">LegalZoom Affiliate Program: High-Ticket Legal Offers That Pay</a></h3>
+    <p class="post-card-excerpt">
+      Explore the LegalZoom Affiliate Program and earn commissions by promoting high-ticket legal services. Learn how it works, payout details, and tips to maximize your affiliate earnings.
+    </p>
+    <a href="https://affiliateprograms.buzz/blog/legalzoom-affiliate-program/" class="post-read-more">
+      Read Full Article →    </a>
+  </div>
+</article>
+
+
+<article class="post-card" 
+  data-title="YesStyle Affiliate Program: Earn From K-Beauty and Asian Fashion" 
+  data-img="https://vcim.net/extra_mailer3/39_YesStyle-affiliate-program.png" 
+  data-link="https://affiliateprograms.buzz/blog/yesstyle-affiliate-program/">
+  <div class="post-card-image">
+    <img src="https://vcim.net/extra_mailer3/39_YesStyle-affiliate-program.png" alt="YesStyle Affiliate Program">  </div>
+  <div class="post-card-body">
+    <div class="post-card-meta">
+      <span class="post-card-tag">Affiliate Programs</span>
+      <span class="post-card-date">21 Apr 2026</span>
+    </div>
+    <h3>      <a href="https://affiliateprograms.buzz/blog/yesstyle-affiliate-program/">
+        YesStyle Affiliate Program: Earn From K-Beauty and Asian Fashion      </a>    </h3>
+    <p class="post-card-excerpt">
+      Join the YesStyle Affiliate Program and earn commissions by promoting K-beauty and Asian fashion products. Learn how it works, commission rates, and tips to boost your earnings.    </p>
+    <a href="https://affiliateprograms.buzz/blog/yesstyle-affiliate-program/" class="post-read-more">
+      Read Full Article →
+    </a>
+  </div>
+</article>
+
+
+    </div>
+
+    <div class="load-more-wrap">
+      <button class="load-more-btn" id="loadMoreBtn">Load More Posts →</button>
+    </div>
+
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+       FOOTER (exact from landing page)
+       ══════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <a href="#" style="margin-bottom:16px; display:inline-block;">
+          <img src="https://vcim.net/extra_mailer3/596_d432bf7d-8a61-420f-844d-994f42736289.png" alt="AffiliatePrograms" class="footer-logo-img">
+        </a>
+        <p>Discover the best affiliate programs across SaaS, finance, e-commerce and more. Compare commissions, payouts, and join high-paying affiliate programs easily.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <div class="footer-links">
+          <a href="https://affiliateprograms.buzz/">Home</a>
+          <a href="https://www.vcommission.com/affiliates/">Affiliates</a>
+          <a href="https://www.vcommission.com/advertisers/">Advertisers</a>
+          <a href="https://affiliateprograms.buzz/affiliate-programs/">Affiliate Programs</a>
+          <a href="https://affiliateprograms.buzz/blog/">Blog</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Subscribe for Updates</h3>
+        <p>Get the latest news and insights delivered to your inbox. No spam, just value.</p>
+        <form name="footer-subscribe-form" class="footer-email-row">
+          <input type="email" name="Email" placeholder="Your Email Address" required>
+          <button type="submit">→</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 AffiliatePrograms.buzz All rights reserved.</span>
+    </div>
+  </footer>
+
+
+  <!-- ══════════════════════════════════════════════════
+       SCRIPTS
+       ══════════════════════════════════════════════════ -->
+  <script>
+
+    /* ── Search: build data from post cards ── */
+    var allPostCards = document.querySelectorAll('.post-card');
+    var searchInput = document.getElementById('searchInput');
+    var searchBtnEl = document.getElementById('searchBtn');
+    var searchDropdown = document.getElementById('searchDropdown');
+    var featuredPost = document.getElementById('featuredPost');
+    var searchResultsArea = document.getElementById('searchResultsArea');
+    var searchResultsList = document.getElementById('searchResultsList');
+    var searchResultsTitle = document.getElementById('searchResultsTitle');
+
+    function getSearchData() {
+      var data = [];
+      allPostCards.forEach(function(card) {
+        data.push({
+          title: card.getAttribute('data-title'),
+          img: card.getAttribute('data-img'),
+          link: card.getAttribute('data-link'),
+          excerpt: card.querySelector('.post-card-excerpt') ? card.querySelector('.post-card-excerpt').textContent : '',
+          tag: card.querySelector('.post-card-tag') ? card.querySelector('.post-card-tag').textContent : ''
+        });
+      });
+      return data;
+    }
+
+    var searchData = getSearchData();
+
+
+    /* ── Live dropdown suggestions ── */
+    searchInput.addEventListener('input', function() {
+      var q = searchInput.value.toLowerCase().trim();
+
+      /* Reset if empty */
+      if (q === '') {
+        featuredPost.classList.remove('search-hidden');
+        searchResultsArea.classList.remove('active');
+      }
+
+      if (q.length < 2) {
+        searchDropdown.classList.remove('open');
+        searchDropdown.innerHTML = '';
+        return;
+      }
+
+      var matches = searchData.filter(function(p) {
+        return p.title.toLowerCase().indexOf(q) > -1 ||
+               p.excerpt.toLowerCase().indexOf(q) > -1 ||
+               p.tag.toLowerCase().indexOf(q) > -1;
+      }).slice(0, 6);
+
+      if (matches.length === 0) {
+        searchDropdown.innerHTML = '<div class="search-dropdown-none">No results found</div>';
+        searchDropdown.classList.add('open');
+        return;
+      }
+
+      searchDropdown.innerHTML = matches.map(function(p) {
+        return '<a class="search-dropdown-item" href="' + p.link + '">' +
+          '<img src="' + p.img + '" alt="">' +
+          '<span>' + p.title + '</span>' +
+          '</a>';
+      }).join('');
+
+      searchDropdown.classList.add('open');
+    });
+
+    /* Close dropdown on outside click */
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.search-form')) {
+        searchDropdown.classList.remove('open');
+      }
+    });
+
+
+    /* ── Full search (Enter or button) ── */
+    function performFullSearch() {
+      var q = searchInput.value.toLowerCase().trim();
+      searchDropdown.classList.remove('open');
+      if (!q) return;
+
+      featuredPost.classList.add('search-hidden');
+      searchResultsArea.classList.add('active');
+
+      var matches = searchData.filter(function(p) {
+        return p.title.toLowerCase().indexOf(q) > -1 ||
+               p.excerpt.toLowerCase().indexOf(q) > -1 ||
+               p.tag.toLowerCase().indexOf(q) > -1;
+      });
+
+      searchResultsTitle.textContent = 'Search Results for "' + searchInput.value.trim() + '"';
+
+      if (matches.length === 0) {
+        searchResultsList.innerHTML = '<div class="search-no-match">No posts found matching your search.</div>';
+      } else {
+        searchResultsList.innerHTML = matches.map(function(p) {
+          return '<div class="search-result-card">' +
+            '<img src="' + p.img + '" alt="">' +
+            '<div>' +
+              '<h4><a href="' + p.link + '">' + p.title + '</a></h4>' +
+              '<span>' + p.tag + '</span>' +
+            '</div>' +
+            '</div>';
+        }).join('');
+      }
+    }
+
+    searchBtnEl.addEventListener('click', performFullSearch);
+    searchInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') performFullSearch();
+    });
+
+
+    /* ── Load More ── */
+    var loadMoreBtn = document.getElementById('loadMoreBtn');
+    loadMoreBtn.addEventListener('click', function() {
+      var hidden = document.querySelectorAll('.post-card.hidden-post');
+      var count = 0;
+      hidden.forEach(function(post) {
+        if (count < 8) {
+          post.classList.remove('hidden-post');
+          count++;
+        }
+      });
+      if (document.querySelectorAll('.post-card.hidden-post').length === 0) {
+        loadMoreBtn.classList.add('hidden-btn');
+      }
+    });
+
+
+    /* ── Footer Newsletter ── */
+    var scriptURL1 = 'https://script.google.com/macros/s/AKfycby_x2S0pOEQL2zCzTXydrx2h_zZm2HPx3VFQUASZpYLUGBD9EvhsycpI644qKPHIFhe/exec';
+    var form2 = document.querySelector('form[name="footer-subscribe-form"]');
+    if (form2) {
+      form2.addEventListener('submit', function(e) {
+        if (form2.checkValidity()) {
+          e.preventDefault();
+          var btn = form2.querySelector('button[type="submit"]');
+          btn.disabled = true;
+          var orig = btn.innerText;
+          btn.innerText = '...';
+          fetch(scriptURL1, { method: 'POST', mode: 'no-cors', body: new FormData(form2) })
+            .then(function() { alert("Thank you for signing up!"); form2.reset(); })
+            .catch(function() { alert("Something went wrong."); })
+            .finally(function() { btn.disabled = false; btn.innerText = orig; });
+        }
+      });
+    }
+
+
+    /* ── Scroll fade-in ── */
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.post-card, .featured-post').forEach(function(el) {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(el);
+    });
+
+  </script>
+
+</body>
+</html>
