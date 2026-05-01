@@ -1,0 +1,268 @@
+
+<!-- ══════════════════════════════════════════════════════════════
+     SHARED HEADER — affiliateprograms.buzz (CSS + HTML + JS)
+     ══════════════════════════════════════════════════════════════ -->
+
+<style>
+
+/* ══════════════════════════════════════════════════════════════
+   HEADER VARIABLES
+   ══════════════════════════════════════════════════════════════ */
+
+:root {
+  --primary: #4318D1;
+  --primary-dark: #1a0a5c;
+  --accent: #c1ff00;
+  --dark: #0f0a2e;
+  --white: #ffffff;
+  --light: #f5f3ff;
+  --gray: #6b7280;
+  --gray-light: #e5e7eb;
+  --blue: #2563eb;
+  --font-display: 'Outfit', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --max-w: 1280px;
+  --px: clamp(1rem, 4vw, 3rem);
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   HEADER
+   ══════════════════════════════════════════════════════════════ */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0 var(--px);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.header-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 74px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 38px;
+  width: auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.nav a {
+  color: var(--dark);
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--font-display);
+  transition: color 0.25s;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: #1a4fd6;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #1a4fd6;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  font-family: var(--font-display);
+  transition: transform 0.25s, box-shadow 0.25s;
+  text-decoration: none;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(26, 79, 214, 0.35);
+}
+
+.cta-btn i {
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  z-index: 101;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--dark);
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Mobile nav dropdown */
+.nav.show {
+  display: flex !important;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  flex-direction: column;
+  padding: 20px 24px 28px;
+  gap: 0;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.nav.show a {
+  padding: 14px 0;
+  font-size: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.nav.show a:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .header-inner {
+    height: 64px;
+  }
+
+  .logo-img {
+    height: 32px;
+  }
+
+  .cta-btn {
+    padding: 8px 18px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-inner {
+    height: 58px;
+  }
+
+  .logo-img {
+    height: 28px;
+  }
+
+  .cta-btn {
+    padding: 7px 14px;
+    font-size: 12px;
+  }
+}
+
+</style>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     HEADER HTML
+     ══════════════════════════════════════════════════════════════ -->
+
+<header class="header" id="header">
+  <div class="header-inner">
+
+    <a href="https://affiliateprograms.buzz/" class="logo">
+      <img src="https://vcim.net/extra_mailer3/596_d432bf7d-8a61-420f-844d-994f42736289.png" alt="VCommission" class="logo-img">
+    </a>
+
+    <nav class="nav" id="mainNav">
+      <a href="https://affiliateprograms.buzz/">Home</a>
+      <a href="https://www.vcommission.com/affiliates/">Affiliates</a>
+      <a href="https://www.vcommission.com/advertisers/">Advertisers</a>
+      <a href="https://affiliateprograms.buzz/affiliate-programs/">Affiliate Programs</a>
+      <a href="https://affiliateprograms.buzz/blog/">Blog</a>
+      <a href="https://www.vcommission.com/case-studies/">Case Studies</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#" class="cta-btn">
+        GET STARTED
+        <i class="fa-solid fa-arrow-right-from-square"></i>
+      </a>
+      <button class="menu-toggle" id="apMenuToggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     HEADER JS
+     ══════════════════════════════════════════════════════════════ -->
+
+<script>
+
+  /* ── Sticky header scroll effect ── */
+  var _apHeader = document.getElementById('header');
+  if (_apHeader) {
+    window.addEventListener('scroll', function() {
+      _apHeader.classList.toggle('scrolled', window.scrollY > 40);
+    });
+  }
+
+  /* ── Mobile menu toggle ── */
+  var _apToggle = document.getElementById('apMenuToggle');
+  var _apNav = document.getElementById('mainNav');
+
+  if (_apToggle && _apNav) {
+    _apToggle.addEventListener('click', function() {
+      _apNav.classList.toggle('show');
+    });
+  }
+
+</script>
