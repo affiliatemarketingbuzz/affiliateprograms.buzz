@@ -1,0 +1,219 @@
+
+<!-- ══════════════════════════════════════════════════════════════
+     SHARED FOOTER — affiliateprograms.buzz (CSS + HTML + JS)
+     ══════════════════════════════════════════════════════════════ -->
+
+<style>
+
+/* ══════════════════════════════════════════════════════════════
+   FOOTER CSS
+   ══════════════════════════════════════════════════════════════ */
+
+.footer {
+  background: var(--dark, #0f0a2e);
+  color: #fff;
+  padding: 68px var(--px, clamp(1rem, 4vw, 3rem)) 32px;
+}
+
+.footer-grid {
+  max-width: var(--max-w, 1280px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.footer-brand p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  line-height: 1.75;
+  margin-bottom: 22px;
+  max-width: 290px;
+}
+
+.footer-col h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 22px;
+  font-family: var(--font-display, 'Outfit', sans-serif);
+}
+
+.footer-col h3::after {
+  content: '';
+  display: block;
+  width: 42px;
+  height: 3px;
+  background: var(--blue, #2563eb);
+  border-radius: 2px;
+  margin-top: 14px;
+}
+
+.footer-col p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 15px;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--accent, #c1ff00);
+}
+
+.footer-email-row {
+  display: flex;
+  margin-top: 18px;
+}
+
+.footer-email-row input {
+  flex: 1;
+  padding: 13px 18px;
+  border-radius: 8px 0 0 8px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+}
+
+.footer-email-row input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-email-row button {
+  background: var(--primary, #4318D1);
+  border: none;
+  color: #fff;
+  padding: 13px 18px;
+  border-radius: 0 8px 8px 0;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+.footer-email-row button:hover {
+  background: #5a2ee8;
+}
+
+.footer-bottom {
+  max-width: var(--max-w, 1280px);
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 22px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 13px;
+}
+
+.footer-logo-img {
+  height: 44px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 50px var(--px, 24px) 24px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 36px 16px 20px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
+}
+
+</style>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     FOOTER HTML
+     ══════════════════════════════════════════════════════════════ -->
+
+<footer class="footer">
+  <div class="footer-grid">
+
+    <div class="footer-brand">
+      <a href="https://affiliateprograms.buzz/" style="margin-bottom:16px; display:inline-block;">
+        <img src="https://vcim.net/extra_mailer3/596_d432bf7d-8a61-420f-844d-994f42736289.png" alt="VCommission" class="footer-logo-img">
+      </a>
+      <p>Discover the best affiliate programs across SaaS, finance, e-commerce and more. Compare commissions, payouts, and join high-paying affiliate programs easily.</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <div class="footer-links">
+        <a href="https://affiliateprograms.buzz/">Home</a>
+        <a href="https://www.vcommission.com/affiliates/">Affiliates</a>
+        <a href="https://www.vcommission.com/advertisers/">Advertisers</a>
+        <a href="https://affiliateprograms.buzz/affiliate-programs/">Affiliate Programs</a>
+        <a href="https://affiliateprograms.buzz/blog/">Blog</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h3>Subscribe for Updates</h3>
+      <p>Get the latest news and insights delivered to your inbox. No spam, just value.</p>
+      <form name="footer-subscribe-form" class="footer-email-row">
+        <input type="email" name="Email" placeholder="Your Email Address" required>
+        <button type="submit">→</button>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 AffiliatePrograms.buzz All rights reserved.</span>
+  </div>
+</footer>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     FOOTER JS (newsletter submit)
+     ══════════════════════════════════════════════════════════════ -->
+
+<script>
+
+  /* ── Newsletter (Footer) ── */
+  var _apScriptURL = 'https://script.google.com/macros/s/AKfycby_x2S0pOEQL2zCzTXydrx2h_zZm2HPx3VFQUASZpYLUGBD9EvhsycpI644qKPHIFhe/exec';
+
+  var _apFooterForm = document.querySelector('form[name="footer-subscribe-form"]');
+  if (_apFooterForm) {
+    _apFooterForm.addEventListener('submit', function(e) {
+      if (_apFooterForm.checkValidity()) {
+        e.preventDefault();
+        var btn = _apFooterForm.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        var originalText = btn.innerText;
+        btn.innerText = '...';
+        fetch(_apScriptURL, { method: 'POST', mode: 'no-cors', body: new FormData(_apFooterForm) })
+          .then(function() { alert("Thank you for signing up!"); _apFooterForm.reset(); })
+          .catch(function() { alert("Something went wrong."); })
+          .finally(function() { btn.disabled = false; btn.innerText = originalText; });
+      }
+    });
+  }
+
+</script>
