@@ -81,147 +81,6 @@
   }
 
 
-  /* ════════════════════════════════════════════════
-     HEADER (exact from landing page)
-     ════════════════════════════════════════════════ */
-
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    padding: 0 var(--px);
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-    transition: all 0.3s ease;
-  }
-
-  .header-inner {
-    max-width: var(--max-w);
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 74px;
-  }
-
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .logo-img {
-    height: 38px;
-    width: auto;
-  }
-
-  .nav {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-  }
-
-  .nav a {
-    color: var(--dark);
-    font-size: 15px;
-    font-weight: 500;
-    font-family: var(--font-display);
-    transition: color 0.25s;
-  }
-
-  .nav a:hover {
-    color: #1a4fd6;
-  }
-
-  .header-actions {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .cta-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: #1a4fd6;
-    color: #fff;
-    padding: 10px 24px;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 14px;
-    border: none;
-    font-family: var(--font-display);
-    transition: transform 0.25s, box-shadow 0.25s;
-  }
-
-  .cta-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(26, 79, 214, 0.35);
-  }
-
-  .cta-btn i {
-    font-size: 12px;
-    margin-left: 4px;
-  }
-
-  .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 6px;
-    z-index: 101;
-  }
-
-  .menu-toggle span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background: var(--dark);
-    margin: 5px 0;
-    border-radius: 2px;
-    transition: 0.3s;
-  }
-
-  @keyframes slideDown {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .nav.show {
-    display: flex !important;
-    position: fixed;
-    top: 64px;
-    left: 0;
-    right: 0;
-    background: #fff;
-    flex-direction: column;
-    padding: 20px 24px 28px;
-    gap: 0;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-    z-index: 100;
-    animation: slideDown 0.3s ease;
-  }
-
-  .nav.show a {
-    padding: 14px 0;
-    font-size: 16px;
-    border-bottom: 1px solid #f0f0f0;
-  }
-
-  .nav.show a:last-child {
-    border-bottom: none;
-  }
-
 
   /* ════════════════════════════════════════════════
      BLOG HERO BANNER
@@ -800,121 +659,7 @@
   }
 
 
-  /* ════════════════════════════════════════════════
-     FOOTER (exact from landing page)
-     ════════════════════════════════════════════════ */
 
-  .footer {
-    background: var(--dark);
-    color: #fff;
-    padding: 68px var(--px) 32px;
-  }
-
-  .footer-grid {
-    max-width: var(--max-w);
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.3fr 1fr 1fr;
-    gap: 50px;
-    margin-bottom: 50px;
-  }
-
-  .footer-brand p {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 14px;
-    line-height: 1.75;
-    margin-bottom: 22px;
-    max-width: 290px;
-  }
-
-  .footer-col h3 {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 22px;
-    font-family: var(--font-display);
-  }
-
-  .footer-col h3::after {
-    content: '';
-    display: block;
-    width: 42px;
-    height: 3px;
-    background: var(--blue);
-    border-radius: 2px;
-    margin-top: 14px;
-  }
-
-  .footer-col p {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-  .footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .footer-links a {
-    color: rgba(255, 255, 255, 0.55);
-    font-size: 15px;
-    transition: color 0.3s;
-  }
-
-  .footer-links a:hover {
-    color: var(--accent);
-  }
-
-  .footer-email-row {
-    display: flex;
-    margin-top: 18px;
-  }
-
-  .footer-email-row input {
-    flex: 1;
-    padding: 13px 18px;
-    border-radius: 8px 0 0 8px;
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    background: rgba(255, 255, 255, 0.04);
-    color: #fff;
-    font-size: 14px;
-    outline: none;
-  }
-
-  .footer-email-row input::placeholder {
-    color: rgba(255, 255, 255, 0.3);
-  }
-
-  .footer-email-row button {
-    background: var(--primary);
-    border: none;
-    color: #fff;
-    padding: 13px 18px;
-    border-radius: 0 8px 8px 0;
-    font-size: 18px;
-    transition: background 0.25s;
-  }
-
-  .footer-email-row button:hover {
-    background: #5a2ee8;
-  }
-
-  .footer-bottom {
-    max-width: var(--max-w);
-    margin: 0 auto;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    padding-top: 22px;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.35);
-    font-size: 13px;
-  }
-
-  .footer-logo-img {
-    height: 44px;
-    width: auto;
-    filter: brightness(0) invert(1);
-  }
 
 
   /* ════════════════════════════════════════════════
@@ -1059,33 +804,7 @@
   <!-- ══════════════════════════════════════════════════
        HEADER (exact from landing page)
        ══════════════════════════════════════════════════ -->
-  <header class="header" id="header">
-    <div class="header-inner">
-
-      <a href="https://affiliateprograms.buzz/" class="logo">
-        <img src="https://vcim.net/extra_mailer3/596_d432bf7d-8a61-420f-844d-994f42736289.png" alt="AffiliatePrograms" class="logo-img">
-      </a>
-
-      <nav class="nav" id="mainNav">
-        <a href="https://affiliateprograms.buzz/">Home</a>
-        <a href="https://www.vcommission.com/affiliates/">Affiliates</a>
-        <a href="https://www.vcommission.com/advertisers/">Advertisers</a>
-        <a href="https://affiliateprograms.buzz/affiliate-programs/">Affiliate Programs</a>
-        <a href="https://affiliateprograms.buzz/blog/">Blog</a>
-        <a href="https://www.vcommission.com/case-studies/">Case Studies</a>
-      </nav>
-
-      <div class="header-actions">
-       
-        <button class="menu-toggle" onclick="document.getElementById('mainNav').classList.toggle('show')">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-
-    </div>
-  </header>
+<div id="header-placeholder"></div>
 
 
   <!-- ══════════════════════════════════════════════════
@@ -1297,43 +1016,7 @@
   <!-- ══════════════════════════════════════════════════
        FOOTER (exact from landing page)
        ══════════════════════════════════════════════════ -->
-  <footer class="footer">
-    <div class="footer-grid">
-
-      <div class="footer-brand">
-        <a href="#" style="margin-bottom:16px; display:inline-block;">
-          <img src="https://vcim.net/extra_mailer3/596_d432bf7d-8a61-420f-844d-994f42736289.png" alt="AffiliatePrograms" class="footer-logo-img">
-        </a>
-        <p>Discover the best affiliate programs across SaaS, finance, e-commerce and more. Compare commissions, payouts, and join high-paying affiliate programs easily.</p>
-      </div>
-
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <div class="footer-links">
-          <a href="https://affiliateprograms.buzz/">Home</a>
-          <a href="https://www.vcommission.com/affiliates/">Affiliates</a>
-          <a href="https://www.vcommission.com/advertisers/">Advertisers</a>
-          <a href="https://affiliateprograms.buzz/affiliate-programs/">Affiliate Programs</a>
-          <a href="https://affiliateprograms.buzz/blog/">Blog</a>
-        </div>
-      </div>
-
-      <div class="footer-col">
-        <h3>Subscribe for Updates</h3>
-        <p>Get the latest news and insights delivered to your inbox. No spam, just value.</p>
-        <form name="footer-subscribe-form" class="footer-email-row">
-          <input type="email" name="Email" placeholder="Your Email Address" required>
-          <button type="submit">→</button>
-        </form>
-      </div>
-
-    </div>
-
-    <div class="footer-bottom">
-      <span>© 2026 AffiliatePrograms.buzz All rights reserved.</span>
-    </div>
-  </footer>
-
+  <div id="footer-placeholder"></div>
 
   <!-- ══════════════════════════════════════════════════
        SCRIPTS
@@ -1470,25 +1153,32 @@ loadMoreBtn.addEventListener('click', function () {
   }
 });
 
-    /* ── Footer Newsletter ── */
-    var scriptURL1 = 'https://script.google.com/macros/s/AKfycby_x2S0pOEQL2zCzTXydrx2h_zZm2HPx3VFQUASZpYLUGBD9EvhsycpI644qKPHIFhe/exec';
-    var form2 = document.querySelector('form[name="footer-subscribe-form"]');
-    if (form2) {
-      form2.addEventListener('submit', function(e) {
-        if (form2.checkValidity()) {
-          e.preventDefault();
-          var btn = form2.querySelector('button[type="submit"]');
-          btn.disabled = true;
-          var orig = btn.innerText;
-          btn.innerText = '...';
-          fetch(scriptURL1, { method: 'POST', mode: 'no-cors', body: new FormData(form2) })
-            .then(function() { alert("Thank you for signing up!"); form2.reset(); })
-            .catch(function() { alert("Something went wrong."); })
-            .finally(function() { btn.disabled = false; btn.innerText = orig; });
-        }
+    /* ── header and footer  ── */
+      fetch('/header.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('header-placeholder').innerHTML = html;
+      const s = document.getElementById('header-placeholder').querySelectorAll('script');
+      s.forEach(o => {
+        const n = document.createElement('script');
+        n.textContent = o.textContent;
+        document.body.appendChild(n);
+        o.remove();
       });
-    }
+    });
 
+  fetch('/footer.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('footer-placeholder').innerHTML = html;
+      const s = document.getElementById('footer-placeholder').querySelectorAll('script');
+      s.forEach(o => {
+        const n = document.createElement('script');
+        n.textContent = o.textContent;
+        document.body.appendChild(n);
+        o.remove();
+      });
+    });
 
     /* ── Scroll fade-in ── */
     var observer = new IntersectionObserver(function(entries) {
@@ -1507,6 +1197,9 @@ loadMoreBtn.addEventListener('click', function () {
       observer.observe(el);
     });
 
+
+
+    
   </script>
 
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"b537a0f783a6442c98d3d43e96538811","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
